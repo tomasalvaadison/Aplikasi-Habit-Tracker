@@ -1,0 +1,468 @@
+openapi: 3.0.0
+info:
+  title: Habit Tracker API
+  description: API documentation for Habit Tracker Mobile App
+  version: 1.0.0
+  contact:
+    name: Habit Tracker Team
+    
+servers:
+  - url: http://192.168.1.100:3000
+    description: Development server
+  - url: http://localhost:3000
+    description: Local server
+
+tags:
+  - name: Authentication
+    description: User authentication endpoints
+  - name: Habits
+    description: Habit management endpoints
+  - name: Logs
+    description: Habit log tracking endpoints
+  - name: Quotes
+    description: Motivational quotes endpoints
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+          
+    Habit:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+          example: "#3B82F6"
+        icon:
+          type: string
+        frequency:
+          type: string
+          enum: [daily, weekly]
+        target_days:
+          type: integer
+        current_streak:
+          type: integer
+        total_completions:
+          type: integer
+        last_completed:
+          type: string
+          format: date
+        created_at:
+          type: string
+          format: date-time
+          
+    HabitLog:
+      type: object
+      properties:
+        id:
+          type: integer
+        habit_id:
+          type: integer
+        completed_date:
+          type: string
+          format: date
+        notes:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+          
+    Quote:
+      type: object
+      properties:
+        id:
+          type: integer
+        text:
+          type: string
+        author:
+          type: string
+
+paths:
+  /api/auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register new user
+      description: Create a new user account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - password
+              properties:
+                name:
+                  type: string
+                  example: Thomas
+                email:
+                  type: string
+                  format: email
+                  example: thomas@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  token:
+                    type: string
+        '400':
+          description: Invalid input or user already exists
+          
+  /api/auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: Login user
+      description: Authenticate user and get JWT token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: thomas@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  token:
+                    type: string
+        '401':
+          description: Invalid credentials
+          
+  /api/habits:
+    get:
+      tags:
+        - Habits
+      summary: Get all habits
+      description: Retrieve all habits for authenticated user
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: List of habits
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Habit'
+        '401':
+          description: Unauthorized
+          
+    post:
+      tags:
+        - Habits
+      summary: Create new habit
+      description: Create a new habit for authenticated user
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+              properties:
+                title:
+                  type: string
+                  example: Drink 8 glasses of water
+                description:
+                  type: string
+                  example: Stay hydrated throughout the day
+                color:
+                  type: string
+                  example: "#3B82F6"
+                icon:
+                  type: string
+                  example: water
+                frequency:
+                  type: string
+                  enum: [daily, weekly]
+                  default: daily
+                target_days:
+                  type: integer
+                  default: 30
+      responses:
+        '201':
+          description: Habit created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Habit'
+        '400':
+          description: Invalid input
+        '401':
+          description: Unauthorized
+          
+  /api/habits/{id}:
+    get:
+      tags:
+        - Habits
+      summary: Get habit by ID
+      description: Retrieve a specific habit
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Habit details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Habit'
+        '404':
+          description: Habit not found
+          
+    put:
+      tags:
+        - Habits
+      summary: Update habit
+      description: Update an existing habit
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                color:
+                  type: string
+                icon:
+                  type: string
+                frequency:
+                  type: string
+                target_days:
+                  type: integer
+      responses:
+        '200':
+          description: Habit updated successfully
+        '404':
+          description: Habit not found
+          
+    delete:
+      tags:
+        - Habits
+      summary: Delete habit
+      description: Delete a habit and all its logs
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Habit deleted successfully
+        '404':
+          description: Habit not found
+          
+  /api/logs/{habitId}/toggle:
+    post:
+      tags:
+        - Logs
+      summary: Toggle habit completion
+      description: Mark habit as completed or uncompleted for a date
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: habitId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                  example: "2026-01-12"
+                notes:
+                  type: string
+                  example: Felt great today!
+      responses:
+        '200':
+          description: Log toggled successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  log:
+                    $ref: '#/components/schemas/HabitLog'
+                    
+  /api/logs/{habitId}:
+    get:
+      tags:
+        - Logs
+      summary: Get habit logs
+      description: Get all logs for a specific habit
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: habitId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List of logs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HabitLog'
+                  
+  /api/logs/date/{date}:
+    get:
+      tags:
+        - Logs
+      summary: Get logs by date
+      description: Get all logs for a specific date
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: date
+          in: path
+          required: true
+          schema:
+            type: string
+            format: date
+          example: "2026-01-12"
+      responses:
+        '200':
+          description: List of logs for the date
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HabitLog'
+                  
+  /api/logs/stats/overview:
+    get:
+      tags:
+        - Logs
+      summary: Get statistics
+      description: Get user's habit statistics overview
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Statistics overview
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalHabits:
+                    type: integer
+                  totalCompletions:
+                    type: integer
+                  thisMonth:
+                    type: integer
+                  last7Days:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        completed_date:
+                          type: string
+                          format: date
+                        count:
+                          type: integer
+                          
+  /api/quotes/random:
+    get:
+      tags:
+        - Quotes
+      summary: Get random quote
+      description: Get a random motivational quote
+      responses:
+        '200':
+          description: Random quote
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
