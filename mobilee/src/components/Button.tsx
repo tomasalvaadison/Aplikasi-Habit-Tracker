@@ -68,6 +68,31 @@ export default function Button({
     }
   };
 
+  return (
+    <TouchableOpacity
+      style={[
+        styles.button,
+        getVariantStyle(),
+        getSizeStyle(),
+        isDisabled && styles.disabled,
+        style,
+      ]}
+      onPress={onPress}
+      disabled={isDisabled}
+      activeOpacity={0.7}
+    >
+      {loading ? (
+        <ActivityIndicator color="#FFFFFF" />
+      ) : (
+        <Text style={[styles.text, getTextVariantStyle(), textStyle]}>
+          {title}
+        </Text>
+      )}
+    </TouchableOpacity>
+  );
+}
+
+
 
 
   
