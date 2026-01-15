@@ -20,4 +20,20 @@ export default function Input({
   containerStyle,
   style,
   ...props
-}:
+}: InputProps) {
+  return (
+    <View style={[styles.container, containerStyle]}>
+      {label && <Text style={styles.label}>{label}</Text>}
+      <TextInput
+        style={[
+          styles.input,
+          error && styles.inputError,
+          style,
+        ]}
+        placeholderTextColor="#9CA3AF"
+        {...props}
+      />
+      {error && <Text style={styles.error}>{error}</Text>}
+    </View>
+  );
+}
