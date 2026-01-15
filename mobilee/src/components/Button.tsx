@@ -31,4 +31,22 @@ export default function Button({
 }: ButtonProps) {
   const isDisabled = disabled || loading;
 
+  const getVariantStyle = () => {
+    switch (variant) {
+      case 'primary':
+        return styles.primary;
+      case 'secondary':
+        return styles.secondary;
+      case 'danger':
+        return styles.danger;
+      case 'outline':
+        return styles.outline;
+      default:
+        return styles.primary;
+    }
+  };
+
+  
+
+
 
