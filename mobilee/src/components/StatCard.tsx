@@ -33,3 +33,38 @@ export default function StatCard({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  card: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  iconCircle: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  value: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    marginTop: 8,
+  },
+  label: {
+    fontSize: 12,
+    color: '#6B7280',
+    marginTop: 4,
+    textAlign: 'center',
+  },
+});
