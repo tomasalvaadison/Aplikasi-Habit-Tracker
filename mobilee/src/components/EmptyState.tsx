@@ -23,3 +23,23 @@ export default function EmptyState({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 60,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#9CA3AF',
+    marginTop: 16,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#D1D5DB',
+    marginTop: 4,
+    textAlign: 'center',
+  },
+});
