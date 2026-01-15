@@ -14,3 +14,10 @@ interface InputProps extends TextInputProps {
   containerStyle?: ViewStyle;
 }
 
+export default function Input({
+  label,
+  error,
+  containerStyle,
+  style,
+  ...props
+}:
