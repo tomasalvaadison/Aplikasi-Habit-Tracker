@@ -19,3 +19,16 @@ interface ButtonProps {
   textStyle?: TextStyle;
 }
 
+export default function Button({
+  title,
+  onPress,
+  loading = false,
+  disabled = false,
+  variant = 'primary',
+  size = 'medium',
+  style,
+  textStyle,
+}: ButtonProps) {
+  const isDisabled = disabled || loading;
+
+
