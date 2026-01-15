@@ -10,3 +10,12 @@ interface StatCardProps {
   label: string;
   style?: ViewStyle;
 }
+
+export default function StatCard({
+  icon,
+  iconColor,
+  iconBackgroundColor,
+  value,
+  label,
+  style,
+}:
