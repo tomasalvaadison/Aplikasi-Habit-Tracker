@@ -29,3 +29,29 @@ export default function ScreenHeader({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#FFFFFF',
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1F2937',
+  },
+  backButton: {
+    width: 40,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  placeholder: {
+    width: 40,
+  },
+});
