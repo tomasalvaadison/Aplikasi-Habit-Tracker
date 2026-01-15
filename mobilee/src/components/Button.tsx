@@ -92,6 +92,57 @@ export default function Button({
   );
 }
 
+const styles = StyleSheet.create({
+  button: {
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  // Variants
+  primary: {
+    backgroundColor: '#3B82F6',
+  },
+  secondary: {
+    backgroundColor: '#6B7280',
+  },
+  danger: {
+    backgroundColor: '#EF4444',
+  },
+  outline: {
+    backgroundColor: 'transparent',
+    borderWidth: 2,
+    borderColor: '#3B82F6',
+  },
+  // Sizes
+  small: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  medium: {
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+  },
+  large: {
+    paddingVertical: 20,
+    paddingHorizontal: 32,
+  },
+  // States
+  disabled: {
+    opacity: 0.6,
+  },
+  // Text
+  text: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  primaryText: {
+    color: '#FFFFFF',
+  },
+  outlineText: {
+    color: '#3B82F6',
+  },
+});
+
 
 
 
