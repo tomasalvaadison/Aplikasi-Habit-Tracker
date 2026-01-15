@@ -8,3 +8,10 @@ interface ScreenHeaderProps {
   onBackPress?: () => void;
   rightComponent?: React.ReactNode;
 }
+
+export default function ScreenHeader({
+  title,
+  showBackButton = false,
+  onBackPress,
+  rightComponent,
+}:
