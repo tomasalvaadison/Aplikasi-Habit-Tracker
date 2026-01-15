@@ -59,6 +59,16 @@ export default function Button({
     }
   };
 
+  const getTextVariantStyle = () => {
+    switch (variant) {
+      case 'outline':
+        return styles.outlineText;
+      default:
+        return styles.primaryText;
+    }
+  };
+
+
 
   
 
