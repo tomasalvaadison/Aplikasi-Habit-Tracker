@@ -9,3 +9,17 @@ interface EmptyStateProps {
   style?: ViewStyle;
 }
 
+export default function EmptyState({
+  icon,
+  title,
+  subtitle,
+  style,
+}: EmptyStateProps) {
+  return (
+    <View style={[styles.container, style]}>
+      <Ionicons name={icon} size={64} color="#D1D5DB" />
+      <Text style={styles.title}>{title}</Text>
+      {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
+    </View>
+  );
+}
