@@ -98,5 +98,15 @@ export default function AddHabitScreen() {
           onChangeText={setTargetDays}
           keyboardType="numeric"
         />
+        <Button
+          title="Create Habit"
+          onPress={handleSubmit}
+          loading={loading}
+          style={styles.submitButton}
+        />
+      </View>
+    </ScrollView>
+  );
+}
 
   
