@@ -62,3 +62,11 @@ export default function AuthScreen() {
       } else {
         await register(email, password, name);
       }
+
+          } catch (error: any) {
+      Alert.alert('Error', error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
