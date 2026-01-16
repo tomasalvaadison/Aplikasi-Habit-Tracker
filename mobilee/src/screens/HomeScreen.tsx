@@ -64,3 +64,14 @@ import EmptyState from '../components/EmptyState';
       {
         text: 'Delete',
         style: 'destructive',
+        onPress: async () => {
+          try {
+            await habitAPI.delete(habitId);
+            loadData();
+          } catch (error) {
+            Alert.alert('Error', 'Failed to delete habit');
+          }
+        },
+      },
+    ]);
+  };
