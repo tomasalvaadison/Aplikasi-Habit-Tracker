@@ -58,5 +58,15 @@ export default function AddHabitScreen() {
       setLoading(false);
     }
   };
+  return (
+    <ScrollView style={styles.container}>
+      <View style={styles.content}>
+        <Input
+          label="Habit Title *"
+          placeholder="e.g., Drink 8 glasses of water"
+          value={title}
+          onChangeText={setTitle}
+          error={errors.title}
+        />
 
   
