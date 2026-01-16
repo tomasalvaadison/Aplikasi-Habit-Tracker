@@ -60,4 +60,4 @@ export default function AppNavigator() {
               component={AuthScreen}
               options={{ headerShown: false }}
             />
-
+          ) : (
