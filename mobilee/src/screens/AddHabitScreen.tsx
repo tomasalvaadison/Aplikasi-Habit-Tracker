@@ -140,5 +140,8 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'transparent',
   },
+  colorSelected: {
+    borderColor: '#1F2937',
+  },
 
   
