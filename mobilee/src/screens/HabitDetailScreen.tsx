@@ -79,5 +79,11 @@ export default function HabitDetailScreen() {
           value={habit.current_streak}
           label="Current Streak"
         />
+        <StatCard
+          icon="checkmark-circle"
+          iconColor="#10B981"
+          value={habit.total_completions}
+          label="Total Done"
+        />
 
 
