@@ -61,3 +61,4 @@ export default function AppNavigator() {
               options={{ headerShown: false }}
             />
           ) : (
+            <>
