@@ -75,3 +75,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
    throw new Error(error.response?.data?.error || 'Registration failed');
     }
   };
+
+  const logout = async () => {
+    try {
