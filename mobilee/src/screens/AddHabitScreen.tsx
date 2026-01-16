@@ -91,5 +91,12 @@ export default function AddHabitScreen() {
             />
           ))}
         </View>
+        <Input
+          label="Target Days"
+          placeholder="30"
+          value={targetDays}
+          onChangeText={setTargetDays}
+          keyboardType="numeric"
+        />
 
   
