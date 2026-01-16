@@ -23,3 +23,4 @@ function MainTabs() {
             let iconName: any;
             
             if (route.name === 'Home') {
+              iconName
