@@ -58,5 +58,6 @@ export default function AppNavigator() {
             <Stack.Screen
               name="Auth"
               component={AuthScreen}
+              options={{ headerShown: false }}
            
 
