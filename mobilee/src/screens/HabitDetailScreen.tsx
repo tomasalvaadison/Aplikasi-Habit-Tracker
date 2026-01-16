@@ -24,3 +24,10 @@ export default function HabitDetailScreen() {
     loadData();
   }, []);
 
+    const loadData = async () => {
+    try {
+      const [habitRes, logsRes] = await Promise.all([
+        habitAPI.getById(habitId),
+        logAPI.getHabitLogs(habitId),
+      ]);
+
