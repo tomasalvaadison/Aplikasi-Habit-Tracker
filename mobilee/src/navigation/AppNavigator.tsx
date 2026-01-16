@@ -76,5 +76,5 @@ export default function AppNavigator() {
                 }}
              />
              <Stack.Screen
-             
-
+              name="HabitDetail"
+              
