@@ -57,4 +57,6 @@ export default function AppNavigator() {
          {!user ? (
             <Stack.Screen
               name="Auth"
-              
+              component={AuthScreen}
+           
+
