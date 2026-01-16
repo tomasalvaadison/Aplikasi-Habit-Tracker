@@ -12,3 +12,11 @@ import { habitAPI, logAPI } from '../services/api';
 import { Habit, HabitLog } from '../types';
 import StatCard from '../components/StatCard';
 
+export default function HabitDetailScreen() {
+  const [habit, setHabit] = useState<Habit | null>(null);
+  const [logs, setLogs] = useState<HabitLog[]>([]);
+  const [markedDates, setMarkedDates] = useState({});
+  const route = useRoute<any>();
+  const navigation = useNavigation();
+  const { habitId } = route.params;
+
