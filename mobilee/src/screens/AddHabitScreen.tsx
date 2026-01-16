@@ -127,5 +127,11 @@ const styles = StyleSheet.create({
     height: 80,
     textAlignVertical: 'top',
   },
+  colorGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    marginBottom: 16,
+  },
 
   
