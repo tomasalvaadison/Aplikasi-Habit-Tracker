@@ -70,5 +70,6 @@ export default function AppNavigator() {
               <Stack.Screen
                 name="AddHabit"
                 component={AddHabitScreen}
-               
+                options={{
+                 
 
