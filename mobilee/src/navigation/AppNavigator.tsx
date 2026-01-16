@@ -24,4 +24,4 @@ function MainTabs() {
             
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if
+            } else if (route.name === 'Statistics') {
