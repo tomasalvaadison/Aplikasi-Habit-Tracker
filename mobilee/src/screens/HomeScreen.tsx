@@ -78,3 +78,13 @@ import EmptyState from '../components/EmptyState';
   const renderHabit = ({ item }: { item: Habit }) => {
     const today = new Date().toISOString().split('T')[0];
     const isCompletedToday = item.last_completed === today;
+    return (
+      <HabitCard
+        habit={item}
+        isCompletedToday={isCompletedToday}
+        onPress={() => navigation.navigate('HabitDetail', { habitId: item.id })}
+        onLongPress={() => deleteHabit(item.id)}
+        onToggle={() => toggleHabit(item.id)}
+      />
+    );
+  };
