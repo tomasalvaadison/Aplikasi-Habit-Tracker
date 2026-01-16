@@ -17,3 +17,11 @@ const COLORS = [
   '#8B5CF6', '#EC4899', '#14B8A6', '#F97316'
 ];
 
+export default function AddHabitScreen() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [selectedColor, setSelectedColor] = useState(COLORS[0]);
+  const [targetDays, setTargetDays] = useState('30');
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<{title?: string}>({});
+
