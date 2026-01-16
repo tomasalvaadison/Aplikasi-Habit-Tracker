@@ -115,5 +115,11 @@ export default function HabitDetailScreen() {
     padding: 24,
     paddingTop: 40,
   },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginBottom: 8,
+  },
 
 
