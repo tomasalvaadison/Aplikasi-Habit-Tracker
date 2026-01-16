@@ -116,5 +116,12 @@ const styles = StyleSheet.create({
   content: {
     padding: 20,
   },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#1F2937',
+    marginBottom: 8,
+    marginTop: 16,
+  },
 
   
