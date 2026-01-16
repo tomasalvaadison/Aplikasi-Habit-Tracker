@@ -26,3 +26,12 @@ export default function AuthScreen() {
   }>({});
   
   const { login, register } = useAuth();
+
+ const validateForm = () => {
+    const newErrors: any = {};
+    
+    if (!email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Email is invalid';
+    }
