@@ -27,3 +27,4 @@ function MainTabs() {
             } else if (route.name === 'Statistics') {
               iconName = focused ? 'stats-chart' : 'stats-chart-outline';
             } else if  (route.name === 'Profile') {
+              iconName
