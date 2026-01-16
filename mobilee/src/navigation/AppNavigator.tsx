@@ -22,4 +22,4 @@ function MainTabs() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName: any;
             
-            if 
+            if (route.name === 'Home') {
