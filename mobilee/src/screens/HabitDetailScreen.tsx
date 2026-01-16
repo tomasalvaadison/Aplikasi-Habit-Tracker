@@ -121,5 +121,10 @@ export default function HabitDetailScreen() {
     color: '#FFFFFF',
     marginBottom: 8,
   },
+  description: {
+    fontSize: 16,
+    color: '#FFFFFF',
+    opacity: 0.9,
+  },
 
 
