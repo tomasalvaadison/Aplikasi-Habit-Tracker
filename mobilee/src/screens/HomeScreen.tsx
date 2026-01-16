@@ -149,3 +149,10 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#3B82F6',
   },
+  quoteText: {
+    fontSize: 14,
+    color: '#1F2937',
+    fontStyle: 'italic',
+    marginTop: 8,
+    marginBottom: 4,
+  },
