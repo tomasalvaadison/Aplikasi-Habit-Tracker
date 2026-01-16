@@ -102,3 +102,12 @@ export default function AuthScreen() {
             autoCapitalize="none"
             error={errors.email}
           />
+
+                    <Input
+            label="Password"
+            placeholder="Enter your password"
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+            error={errors.password}
+          />
