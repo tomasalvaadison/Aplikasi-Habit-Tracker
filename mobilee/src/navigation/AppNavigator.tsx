@@ -48,4 +48,4 @@ export default function AppNavigator() {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return
+    return null;
