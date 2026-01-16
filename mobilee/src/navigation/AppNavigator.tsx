@@ -82,5 +82,6 @@ export default function AppNavigator() {
                 title: 'Habit Details',
                 headerBackTitle: 'Back',
               }}
-          
+            />
+        
 
