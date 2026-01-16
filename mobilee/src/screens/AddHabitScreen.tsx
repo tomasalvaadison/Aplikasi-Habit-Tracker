@@ -143,5 +143,8 @@ const styles = StyleSheet.create({
   colorSelected: {
     borderColor: '#1F2937',
   },
-
+  submitButton: {
+    marginTop: 32,
+  },
+});
   
