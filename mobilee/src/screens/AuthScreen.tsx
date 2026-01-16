@@ -54,3 +54,11 @@ export default function AuthScreen() {
     if (!validateForm()) {
       return;
     }
+
+        setLoading(true);
+    try {
+      if (isLogin) {
+        await login(email, password);
+      } else {
+        await register(email, password, name);
+      }
