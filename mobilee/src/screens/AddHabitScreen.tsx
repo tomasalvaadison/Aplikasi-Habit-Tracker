@@ -27,3 +27,7 @@ export default function AddHabitScreen() {
 
     const navigation = useNavigation();
 
+    const validateForm = () => {
+    const newErrors: {title?: string} = {};
+
+  
