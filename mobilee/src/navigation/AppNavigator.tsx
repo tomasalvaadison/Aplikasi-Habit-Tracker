@@ -5,3 +5,4 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from  '@expo/vector-icons';
 
 import { useAuth } from '../screens/AuthScreen';
+import
