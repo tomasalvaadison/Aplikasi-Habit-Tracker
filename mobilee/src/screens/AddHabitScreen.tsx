@@ -51,4 +51,12 @@ export default function AddHabitScreen() {
         target_days: parseInt(targetDays) || 30,
       });
 
+            navigation.goBack();
+    } catch (error) {
+      Alert.alert('Error', 'Failed to create habit');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   
