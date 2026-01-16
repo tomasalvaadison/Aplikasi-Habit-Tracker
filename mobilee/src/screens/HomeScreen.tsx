@@ -28,3 +28,19 @@ import EmptyState from '../components/EmptyState';
       loadData();
     }, [])
   );
+
+  const loadData = async () => {
+    try {
+      const [habitsRes, quoteRes] = await Promise.all([
+        habitAPI.getAll(),
+        quoteAPI.getRandom(),
+      ]);
+      setHabits(habitsRes.data);
+      setQuote(quoteRes.data);
+    } catch (error) {
+      Alert.alert('Error', 'Failed to load data');
+    } finally {
+      setLoading(false);
+      setRefreshing(false);
+    }
+  };
