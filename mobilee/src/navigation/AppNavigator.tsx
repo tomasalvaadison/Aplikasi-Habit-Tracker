@@ -37,4 +37,4 @@ function MainTabs() {
            headerShown: false,
           })}
       >
-       <Tab.Screen name="Home"
+       <Tab.Screen name="Home" component={HomeScreen} />
