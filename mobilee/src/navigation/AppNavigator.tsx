@@ -55,3 +55,4 @@ export default function AppNavigator() {
      <NavigationContainer>
        <Stack.Navigator>
          {!user ? (
+            <Stack.Screen
