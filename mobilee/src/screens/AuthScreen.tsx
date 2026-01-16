@@ -81,3 +81,14 @@ export default function AuthScreen() {
           <Text style={styles.subtitle}>
             {isLogin ? 'Welcome Back!' : 'Create Account'}
           </Text>
+
+                    {!isLogin && (
+            <Input
+              label="Name"
+              placeholder="Enter your name"
+              value={name}
+              onChangeText={setName}
+              autoCapitalize="words"
+              error={errors.name}
+            />
+          )}
