@@ -75,4 +75,6 @@ export default function AppNavigator() {
                   headerBackTitle: 'Back',
                 }}
              />
+             <Stack.Screen
+             
 
