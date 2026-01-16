@@ -42,3 +42,9 @@ export default function HabitDetailScreen() {
         };
       });
 
+            setMarkedDates(marked);
+    } catch (error) {
+      Alert.alert('Error', 'Failed to load habit details');
+    }
+  };
+
