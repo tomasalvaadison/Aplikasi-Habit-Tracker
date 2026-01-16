@@ -92,3 +92,13 @@ export default function AuthScreen() {
               error={errors.name}
             />
           )}
+
+                    <Input
+            label="Email"
+            placeholder="Enter your email"
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            autoCapitalize="none"
+            error={errors.email}
+          />
