@@ -67,3 +67,5 @@ export default function AppNavigator() {
                 component={MainTabs}
                 options={{ headerShown: false }}
               />
+              <Stack.Screen
+               
