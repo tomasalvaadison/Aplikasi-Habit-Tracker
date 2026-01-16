@@ -28,3 +28,4 @@ function MainTabs() {
               iconName = focused ? 'stats-chart' : 'stats-chart-outline';
             } else if  (route.name === 'Profile') {
               iconName = focused ? 'person' : 'person-outline';
+            }
