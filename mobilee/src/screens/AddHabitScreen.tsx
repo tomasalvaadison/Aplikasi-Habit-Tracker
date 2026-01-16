@@ -33,5 +33,8 @@ export default function AddHabitScreen() {
           if (!title.trim()) {
       newErrors.title = 'Habit title is required';
     }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   
