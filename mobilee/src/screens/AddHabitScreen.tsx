@@ -77,5 +77,19 @@ export default function AddHabitScreen() {
           numberOfLines={3}
           style={styles.textArea}
         />
+        <Text style={styles.label}>Color</Text>
+        <View style={styles.colorGrid}>
+          {COLORS.map((color) => (
+            <TouchableOpacity
+              key={color}
+              style={[
+                styles.colorOption,
+                { backgroundColor: color },
+                selectedColor === color && styles.colorSelected,
+              ]}
+              onPress={() => setSelectedColor(color)}
+            />
+          ))}
+        </View>
 
   
