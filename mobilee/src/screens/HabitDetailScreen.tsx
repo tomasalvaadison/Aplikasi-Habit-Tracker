@@ -57,4 +57,12 @@ export default function HabitDetailScreen() {
     }
   };
 
+    if (!habit) {
+    return (
+      <View style={styles.loading}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
 
