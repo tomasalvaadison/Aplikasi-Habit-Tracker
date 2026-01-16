@@ -68,4 +68,5 @@ export default function AppNavigator() {
                 options={{ headerShown: false }}
               />
               <Stack.Screen
+                name="AddHabit"
                
