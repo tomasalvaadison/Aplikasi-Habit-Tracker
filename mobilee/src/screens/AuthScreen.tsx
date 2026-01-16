@@ -118,3 +118,8 @@ export default function AuthScreen() {
             loading={loading}
             style={styles.submitButton}
           />
+
+                    <TouchableOpacity onPress={() => {
+            setIsLogin(!isLogin);
+            setErrors({});
+          }}>
