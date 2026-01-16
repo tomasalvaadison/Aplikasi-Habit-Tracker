@@ -72,5 +72,12 @@ export default function HabitDetailScreen() {
           <Text style={styles.description}>{habit.description}</Text>
         )}
       </View>
+      <View style={styles.statsContainer}>
+        <StatCard
+          icon="flame"
+          iconColor="#EF4444"
+          value={habit.current_streak}
+          label="Current Streak"
+        />
 
 
