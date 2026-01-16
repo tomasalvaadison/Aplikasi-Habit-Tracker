@@ -48,3 +48,13 @@ export default function HabitDetailScreen() {
     }
   };
 
+    const onDayPress = async (day: any) => {
+    try {
+      await logAPI.toggle(habitId, { date: day.dateString });
+      loadData();
+    } catch (error) {
+      Alert.alert('Error', 'Failed to update log');
+    }
+  };
+
+
