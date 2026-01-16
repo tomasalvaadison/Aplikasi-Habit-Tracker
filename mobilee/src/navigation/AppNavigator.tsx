@@ -23,4 +23,4 @@ function MainTabs() {
             let iconName: any;
             
             if (route.name === 'Home') {
-              iconName = focused ?
+              iconName = focused ? 'home' :
