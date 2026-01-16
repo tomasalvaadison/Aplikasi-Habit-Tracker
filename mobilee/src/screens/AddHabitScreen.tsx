@@ -37,4 +37,9 @@ export default function AddHabitScreen() {
     return Object.keys(newErrors).length === 0;
   };
 
+    const handleSubmit = async () => {
+    if (!validateForm()) {
+      return;
+    }
+
   
