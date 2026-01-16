@@ -80,5 +80,6 @@ export default function AppNavigator() {
               component={HabitDetailScreen}
               options={{
                 title: 'Habit Details',
-               
+                headerBackTitle: 'Back',
+              
 
