@@ -20,4 +20,4 @@ function MainTabs() {
      <Tab.Navigator
        screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            let
+            let iconName:
