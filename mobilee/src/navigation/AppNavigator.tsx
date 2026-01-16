@@ -79,5 +79,6 @@ export default function AppNavigator() {
               name="HabitDetail"
               component={HabitDetailScreen}
               options={{
+                title: 'Habit Details',
                
 
