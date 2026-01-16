@@ -32,4 +32,4 @@ function MainTabs() {
 
              return <Ionicons name={iconName} size={size} color={color} />;
            },
-
+           tabBarActiveTintColor: '#3B82F6'
