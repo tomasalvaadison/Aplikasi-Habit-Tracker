@@ -37,4 +37,4 @@ function MainTabs() {
            headerShown: false,
           })}
       >
-       <Tab.Screen
+       <Tab.Screen name="Home"
