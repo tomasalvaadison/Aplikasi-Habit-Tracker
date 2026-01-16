@@ -29,3 +29,5 @@ function MainTabs() {
             } else if  (route.name === 'Profile') {
               iconName = focused ? 'person' : 'person-outline';
             }
+
+             return 
