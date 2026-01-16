@@ -92,5 +92,19 @@ export default function HabitDetailScreen() {
           label="Target Days"
         />
       </View>
+      <View style={styles.calendarContainer}>
+        <Text style={styles.sectionTitle}>Calendar</Text>
+        <Calendar
+          markedDates={markedDates}
+          onDayPress={onDayPress}
+          theme={{
+            todayTextColor: habit.color,
+            arrowColor: habit.color,
+          }}
+        />
+      </View>
+    </ScrollView>
+  );
+}
 
 
