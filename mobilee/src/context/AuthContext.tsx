@@ -60,3 +60,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       throw new Error(error.response?.data?.error || 'Login failed');
     }
   };
+
+  const register = async (email: string, password: string, name: string) => {
+    try {
