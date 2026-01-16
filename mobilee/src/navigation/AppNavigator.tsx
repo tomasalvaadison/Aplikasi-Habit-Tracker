@@ -38,4 +38,4 @@ function MainTabs() {
           })}
       >
        <Tab.Screen name="Home" component={HomeScreen} />
-       <Tab.Screen name=
+       <Tab.Screen name="Statistics"
