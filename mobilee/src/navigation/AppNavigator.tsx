@@ -45,4 +45,4 @@ function MainTabs() {
   }
 
 export default function AppNavigator() {
-  const
+  const { user, loading }
