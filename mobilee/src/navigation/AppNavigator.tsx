@@ -12,4 +12,4 @@ import HabitDetailScreen from '../screens/HabitDetailScreen';
 import StatisticsScreen from '../screens/StatisticsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
-const Stack
+const Stack = createNativeStackNavigator();
