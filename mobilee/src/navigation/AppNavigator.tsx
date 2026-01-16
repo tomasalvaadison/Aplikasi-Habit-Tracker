@@ -43,3 +43,5 @@ function MainTabs() {
       </Tab.Navigator>
     );
   }
+
+export
