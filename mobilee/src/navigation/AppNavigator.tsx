@@ -9,4 +9,4 @@ import { useAuth } from '../screens/AuthScreen';
 import HomeScreen from '../screens/HomeScreen';
 import AddHabitScreen from '../screens/AddHabitScreen';
 import HabitDetailScreen from '../screens/HabitDetailScreen';
-import
+import StatisticsScreen
