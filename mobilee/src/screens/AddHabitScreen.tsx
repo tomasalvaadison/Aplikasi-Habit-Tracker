@@ -42,4 +42,13 @@ export default function AddHabitScreen() {
       return;
     }
 
+          setLoading(true);
+    try {
+      await habitAPI.create({
+        title: title.trim(),
+        description: description.trim(),
+        color: selectedColor,
+        target_days: parseInt(targetDays) || 30,
+      });
+
   
