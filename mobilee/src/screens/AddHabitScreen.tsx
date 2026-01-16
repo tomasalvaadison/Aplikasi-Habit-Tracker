@@ -133,5 +133,12 @@ const styles = StyleSheet.create({
     gap: 12,
     marginBottom: 16,
   },
+  colorOption: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    borderWidth: 3,
+    borderColor: 'transparent',
+  },
 
   
