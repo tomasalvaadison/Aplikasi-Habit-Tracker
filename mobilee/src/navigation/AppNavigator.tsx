@@ -44,4 +44,4 @@ function MainTabs() {
     );
   }
 
-export
+export default 
