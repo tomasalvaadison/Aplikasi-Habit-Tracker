@@ -144,3 +144,10 @@ export default function AuthScreen() {
   content: {
     padding: 24,
   },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
