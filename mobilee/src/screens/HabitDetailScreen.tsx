@@ -31,3 +31,6 @@ export default function HabitDetailScreen() {
         logAPI.getHabitLogs(habitId),
       ]);
 
+            setHabit(habitRes.data);
+      setLogs(logsRes.data);
+
