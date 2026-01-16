@@ -34,3 +34,11 @@ export default function HabitDetailScreen() {
             setHabit(habitRes.data);
       setLogs(logsRes.data);
 
+            const marked: any = {};
+      logsRes.data.forEach((log: HabitLog) => {
+        marked[log.completed_date] = {
+          selected: true,
+          selectedColor: habitRes.data.color,
+        };
+      });
+
