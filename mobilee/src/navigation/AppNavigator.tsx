@@ -59,5 +59,5 @@ export default function AppNavigator() {
               name="Auth"
               component={AuthScreen}
               options={{ headerShown: false }}
-           
+            />
 
