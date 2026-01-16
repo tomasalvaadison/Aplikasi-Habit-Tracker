@@ -42,3 +42,4 @@ function MainTabs() {
        <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
     );
+  }
