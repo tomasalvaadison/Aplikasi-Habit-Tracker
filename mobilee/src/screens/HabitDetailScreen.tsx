@@ -126,5 +126,10 @@ export default function HabitDetailScreen() {
     color: '#FFFFFF',
     opacity: 0.9,
   },
+  statsContainer: {
+    flexDirection: 'row',
+    padding: 16,
+    gap: 12,
+  },
 
 
