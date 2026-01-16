@@ -86,3 +86,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Error logging out:', error);
     }
   };
+
+   return (
+    <AuthContext.Provider value={{ user, token, loading, login, register, logout }}>
+      {children}
