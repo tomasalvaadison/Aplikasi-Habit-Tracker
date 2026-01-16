@@ -45,4 +45,4 @@ function MainTabs() {
   }
 
 export default function AppNavigator() {
-  const { user, loading }
+  const { user, loading } = useAuth();
