@@ -100,3 +100,6 @@ export const useAuth = () => {
     throw new Error('useAuth must be used within AuthProvider');
   }
 
+   return context;
+};
+
