@@ -136,3 +136,7 @@ export default function AuthScreen() {
   );
 }
 
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
