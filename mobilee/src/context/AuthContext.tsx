@@ -37,3 +37,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setToken(storedToken);
         setUser(JSON.parse(storedUser));
       }
+
+      } catch (error) {
+      console.error('Error loading auth:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
