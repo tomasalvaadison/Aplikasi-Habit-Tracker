@@ -41,4 +41,4 @@ function MainTabs() {
        <Tab.Screen name="Statistics" component={StatisticsScreen} />
        <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
-    
+    );
