@@ -111,3 +111,10 @@ export default function AuthScreen() {
             secureTextEntry
             error={errors.password}
           />
+
+                    <Button
+            title={isLogin ? 'Login' : 'Register'}
+            onPress={handleSubmit}
+            loading={loading}
+            style={styles.submitButton}
+          />
