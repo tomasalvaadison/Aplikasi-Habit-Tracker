@@ -30,4 +30,8 @@ export default function AddHabitScreen() {
     const validateForm = () => {
     const newErrors: {title?: string} = {};
 
+          if (!title.trim()) {
+      newErrors.title = 'Habit title is required';
+    }
+
   
