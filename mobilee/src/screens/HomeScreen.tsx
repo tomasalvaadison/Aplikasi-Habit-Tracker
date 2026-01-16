@@ -58,3 +58,9 @@ import EmptyState from '../components/EmptyState';
       Alert.alert('Error', 'Failed to update habit');
     }
   };
+  const deleteHabit = (habitId: number) => {
+    Alert.alert('Delete Habit', 'Are you sure?', [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Delete',
+        style: 'destructive',
