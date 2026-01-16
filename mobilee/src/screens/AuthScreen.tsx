@@ -160,3 +160,10 @@ export default function AuthScreen() {
   submitButton: {
     marginTop: 8,
   },
+  switchText: {
+    color: '#3B82F6',
+    textAlign: 'center',
+    marginTop: 16,
+    fontSize: 14,
+  },
+});
