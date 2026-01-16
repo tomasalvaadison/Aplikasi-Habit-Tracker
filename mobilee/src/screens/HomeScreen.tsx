@@ -156,3 +156,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 4,
   },
+  quoteAuthor: {
+    fontSize: 12,
+    color: '#6B7280',
+    textAlign: 'right',
+  },
