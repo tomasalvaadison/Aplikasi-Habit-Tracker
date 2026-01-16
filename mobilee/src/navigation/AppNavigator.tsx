@@ -13,4 +13,4 @@ import StatisticsScreen from '../screens/StatisticsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
-const Tab
+const Tab = createBottomTabNavigator();
