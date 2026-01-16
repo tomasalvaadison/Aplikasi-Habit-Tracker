@@ -44,3 +44,8 @@ import EmptyState from '../components/EmptyState';
       setRefreshing(false);
     }
   };
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    loadData();
+  };
