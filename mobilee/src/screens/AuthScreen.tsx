@@ -151,3 +151,9 @@ export default function AuthScreen() {
     textAlign: 'center',
     marginBottom: 8,
   },
+  subtitle: {
+    fontSize: 18,
+    color: '#6B7280',
+    textAlign: 'center',
+    marginBottom: 32,
+  },
