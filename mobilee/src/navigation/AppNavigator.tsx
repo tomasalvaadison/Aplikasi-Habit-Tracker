@@ -23,4 +23,4 @@ function MainTabs() {
             let iconName: any;
             
             if (route.name === 'Home') {
-              iconName = focused ? 'home' :
+              iconName = focused ? 'home' : 'home-outline';
