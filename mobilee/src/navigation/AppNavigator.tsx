@@ -81,5 +81,6 @@ export default function AppNavigator() {
               options={{
                 title: 'Habit Details',
                 headerBackTitle: 'Back',
-              
+              }}
+          
 
