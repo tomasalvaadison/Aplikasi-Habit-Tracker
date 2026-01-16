@@ -71,5 +71,6 @@ export default function AppNavigator() {
                 name="AddHabit"
                 component={AddHabitScreen}
                 options={{
+                  title: 'New Habit',
                  
 
