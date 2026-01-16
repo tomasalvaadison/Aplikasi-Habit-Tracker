@@ -68,5 +68,14 @@ export default function AddHabitScreen() {
           onChangeText={setTitle}
           error={errors.title}
         />
+        <Input
+          label="Description"
+          placeholder="Add some notes about this habit..."
+          value={description}
+          onChangeText={setDescription}
+          multiline
+          numberOfLines={3}
+          style={styles.textArea}
+        />
 
   
