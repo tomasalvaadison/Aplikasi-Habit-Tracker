@@ -36,4 +36,5 @@ function MainTabs() {
            tabBarInactiveTintColor: '#9CA3AF',
            headerShown: false,
           })}
-         
+      >
+       <Tab.Screen
