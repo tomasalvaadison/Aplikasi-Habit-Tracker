@@ -142,5 +142,11 @@ export default function HabitDetailScreen() {
     shadowRadius: 2,
     elevation: 2,
   },
-
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#1F2937',
+    marginBottom: 16,
+  },
+});
 
