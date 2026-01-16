@@ -49,3 +49,12 @@ import EmptyState from '../components/EmptyState';
     setRefreshing(true);
     loadData();
   };
+
+  const toggleHabit = async (habitId: number) => {
+    try {
+      await logAPI.toggle(habitId, {});
+      loadData();
+    } catch (error) {
+      Alert.alert('Error', 'Failed to update habit');
+    }
+  };
