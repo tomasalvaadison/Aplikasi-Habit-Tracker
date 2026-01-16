@@ -157,3 +157,6 @@ export default function AuthScreen() {
     textAlign: 'center',
     marginBottom: 32,
   },
+  submitButton: {
+    marginTop: 8,
+  },
