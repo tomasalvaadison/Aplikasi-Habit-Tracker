@@ -20,3 +20,7 @@ export default function HabitDetailScreen() {
   const navigation = useNavigation();
   const { habitId } = route.params;
 
+    useEffect(() => {
+    loadData();
+  }, []);
+
