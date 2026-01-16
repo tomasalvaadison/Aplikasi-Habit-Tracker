@@ -19,4 +19,4 @@ function MainTabs() {
   return (
      <Tab.Navigator
        screenOptions={({ route }) => ({
-          tabBarIcon:
+          tabBarIcon: ({ focused, color, size }) => {
