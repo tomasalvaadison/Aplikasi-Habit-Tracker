@@ -56,3 +56,5 @@ export default function AppNavigator() {
        <Stack.Navigator>
          {!user ? (
             <Stack.Screen
+              name="Auth"
+              
