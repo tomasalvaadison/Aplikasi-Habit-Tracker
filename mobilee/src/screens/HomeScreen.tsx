@@ -106,3 +106,11 @@ import EmptyState from '../components/EmptyState';
           <Text style={styles.quoteAuthor}>— {quote.author}</Text>
         </View>
       )}
+      <FlatList
+        data={habits}
+        renderItem={renderHabit}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={styles.listContent}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
