@@ -85,5 +85,12 @@ export default function HabitDetailScreen() {
           value={habit.total_completions}
           label="Total Done"
         />
+        <StatCard
+          icon="trophy"
+          iconColor="#F59E0B"
+          value={habit.target_days}
+          label="Target Days"
+        />
+      </View>
 
 
