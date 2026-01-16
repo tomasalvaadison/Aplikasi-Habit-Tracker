@@ -30,4 +30,4 @@ function MainTabs() {
               iconName = focused ? 'person' : 'person-outline';
             }
 
-             return <Ionicons name
+             return <Ionicons name={iconName}
