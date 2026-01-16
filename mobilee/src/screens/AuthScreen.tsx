@@ -140,3 +140,7 @@ export default function AuthScreen() {
     flexGrow: 1,
     justifyContent: 'center',
   },
+
+  content: {
+    padding: 24,
+  },
