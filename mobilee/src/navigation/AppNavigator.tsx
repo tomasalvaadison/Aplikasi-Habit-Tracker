@@ -18,4 +18,4 @@ const Tab = createBottomTabNavigator();
 function MainTabs() {
   return (
      <Tab.Navigator
-       screenOptions
+       screenOptions={({ route }) => ({
