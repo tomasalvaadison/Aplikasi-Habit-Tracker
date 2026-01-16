@@ -123,5 +123,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     marginTop: 16,
   },
+  textArea: {
+    height: 80,
+    textAlignVertical: 'top',
+  },
 
   
