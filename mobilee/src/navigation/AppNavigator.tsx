@@ -10,4 +10,4 @@ import HomeScreen from '../screens/HomeScreen';
 import AddHabitScreen from '../screens/AddHabitScreen';
 import HabitDetailScreen from '../screens/HabitDetailScreen';
 import StatisticsScreen from '../screens/StatisticsScreen';
-import
+import ProfileScreen
