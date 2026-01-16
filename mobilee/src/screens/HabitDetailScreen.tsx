@@ -64,5 +64,13 @@ export default function HabitDetailScreen() {
       </View>
     );
   }
+  return (
+    <ScrollView style={styles.container}>
+      <View style={[styles.header, { backgroundColor: habit.color }]}>
+        <Text style={styles.title}>{habit.title}</Text>
+        {habit.description && (
+          <Text style={styles.description}>{habit.description}</Text>
+        )}
+      </View>
 
 
