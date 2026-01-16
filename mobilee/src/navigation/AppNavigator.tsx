@@ -74,5 +74,5 @@ export default function AppNavigator() {
                   title: 'New Habit',
                   headerBackTitle: 'Back',
                 }}
-            
+             />
 
