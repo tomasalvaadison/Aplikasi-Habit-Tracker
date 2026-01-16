@@ -75,3 +75,6 @@ import EmptyState from '../components/EmptyState';
       },
     ]);
   };
+  const renderHabit = ({ item }: { item: Habit }) => {
+    const today = new Date().toISOString().split('T')[0];
+    const isCompletedToday = item.last_completed === today;
