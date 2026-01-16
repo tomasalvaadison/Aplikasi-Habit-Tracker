@@ -99,3 +99,10 @@ import EmptyState from '../components/EmptyState';
           <Ionicons name="add" size={24} color="#FFFFFF" />
         </TouchableOpacity>
       </View>
+      {quote && (
+        <View style={styles.quoteCard}>
+          <Ionicons name="chatbox-ellipses-outline" size={24} color="#3B82F6" />
+          <Text style={styles.quoteText}>{quote.text}</Text>
+          <Text style={styles.quoteAuthor}>— {quote.author}</Text>
+        </View>
+      )}
