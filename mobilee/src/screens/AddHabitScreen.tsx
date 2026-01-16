@@ -25,3 +25,5 @@ export default function AddHabitScreen() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{title?: string}>({});
 
+    const navigation = useNavigation();
+
