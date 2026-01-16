@@ -67,3 +67,4 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
  const { user, token } = response.data;
 
       await AsyncStorage.setItem('token', token);
+      await AsyncStorage.setItem('user', JSON.stringify(user));
