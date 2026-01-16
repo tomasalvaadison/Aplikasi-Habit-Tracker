@@ -123,3 +123,15 @@ export default function AuthScreen() {
             setIsLogin(!isLogin);
             setErrors({});
           }}>
+
+                                  <Text style={styles.switchText}>
+              {isLogin
+                ? "Don't have an account? Register"
+                : 'Already have an account? Login'}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
+}
