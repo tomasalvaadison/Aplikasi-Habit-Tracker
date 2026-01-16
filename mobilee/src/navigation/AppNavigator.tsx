@@ -50,3 +50,5 @@ export default function AppNavigator() {
   if (loading) {
     return null;
   }
+
+   return (
