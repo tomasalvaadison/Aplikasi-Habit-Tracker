@@ -111,5 +111,9 @@ export default function HabitDetailScreen() {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  header: {
+    padding: 24,
+    paddingTop: 40,
+  },
 
 
