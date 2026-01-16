@@ -74,3 +74,10 @@ export default function AuthScreen() {
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+
+          <ScrollView contentContainerStyle={styles.scrollContent}>
+        <View style={styles.content}>
+          <Text style={styles.title}>Habit Tracker</Text>
+          <Text style={styles.subtitle}>
+            {isLogin ? 'Welcome Back!' : 'Create Account'}
+          </Text>
