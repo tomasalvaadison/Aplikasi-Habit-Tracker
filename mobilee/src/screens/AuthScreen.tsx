@@ -41,3 +41,11 @@ export default function AuthScreen() {
     } else if (password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
     }
+
+       if (!isLogin && !name) {
+      newErrors.name = 'Name is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
