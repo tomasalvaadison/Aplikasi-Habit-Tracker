@@ -88,3 +88,14 @@ import EmptyState from '../components/EmptyState';
       />
     );
   };
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>My Habits</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('AddHabit')}
+          style={styles.addButton}
+        >
+          <Ionicons name="add" size={24} color="#FFFFFF" />
+        </TouchableOpacity>
+      </View>
