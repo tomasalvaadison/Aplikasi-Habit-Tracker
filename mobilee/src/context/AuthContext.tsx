@@ -72,3 +72,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser(user);
       setToken(token);
  } catch (error: any) {
+   throw new Error(error.response?.data?.error || 'Registration failed');
+    }
+  };
