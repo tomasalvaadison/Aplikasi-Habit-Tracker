@@ -128,3 +128,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#E5E7EB',
   },
+  headerTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1F2937',
+  },
